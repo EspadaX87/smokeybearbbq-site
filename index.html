@@ -80,6 +80,44 @@
                 font-size: 14px;
             }
         }
+        
+        /* Optimize Loading Speed */
+        img, .smokey-effect {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        
+        /* Lazy loading for images */
+        img {
+            loading: lazy;
+        }
+        
+        /* Mobile-Friendly Navbar */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+            nav ul {
+                display: none;
+                flex-direction: column;
+                text-align: center;
+            }
+            .menu-toggle {
+                display: block;
+                margin-bottom: 10px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -87,8 +125,9 @@
         <div class="logo-container">
             <img src="assets/images/logo.png" alt="Smokey Bear BBQ Logo" class="logo">
         </div>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
         <nav>
-            <ul>
+            <ul id="nav-menu">
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="menu.html" class="nav-link">Menu</a></li>
                 <li><a href="catering.html" class="nav-link">Catering</a></li>
@@ -111,5 +150,17 @@
         <p>📍 Find Us: <a href="#">Google Maps Link (Coming Soon)</a></p>
         <p>📞 Call Us: (828) 394-8796</p>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("nav-menu");
+            if (menu.style.display === "flex") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "flex";
+                menu.style.flexDirection = "column";
+            }
+        }
+    </script>
 </body>
 </html>
