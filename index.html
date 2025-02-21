@@ -32,27 +32,28 @@
             gap: 30px;
         }
         .nav-link {
-            color: red;
+            color: #9C1C1C; /* Matches the red in the logo */
             font-weight: bold;
             font-size: 18px;
             text-transform: uppercase;
             text-decoration: none;
         }
         .nav-link:hover {
-            text-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+            text-shadow: 0 0 20px rgba(156, 28, 28, 1);
         }
         
-        /* Smokey Effect */
+        /* Smokey Effect (More Intense) */
         .smokey-effect {
             position: relative;
-            height: 100px;
-            background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0));
-            animation: smokeAnimation 3s infinite alternate;
+            height: 150px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 10%, rgba(0, 0, 0, 0) 90%);
+            animation: smokeAnimation 2s infinite alternate ease-in-out;
+            filter: blur(5px);
         }
         
         @keyframes smokeAnimation {
-            0% { opacity: 0.3; }
-            100% { opacity: 0.7; }
+            0% { opacity: 0.4; transform: translateY(5px); }
+            100% { opacity: 0.9; transform: translateY(-5px); }
         }
     </style>
 </head>
