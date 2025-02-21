@@ -46,8 +46,39 @@
         .smokey-effect {
             position: relative;
             height: 200px;
-            background: url('https://media.giphy.com/media/3oKIPl74CoTkgh1qFy/giphy.gif') no-repeat center center;
+            background: url('https://media.giphy.com/media/l0HlNQ03J5JxX6lva/giphy.gif') no-repeat center center;
             background-size: cover;
+        }
+        
+        /* Mobile-Friendly Adjustments */
+        @media (max-width: 768px) {
+            .logo-container {
+                padding: 10px;
+            }
+            .logo {
+                max-width: 80%; /* Smaller on mobile */
+            }
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+            .nav-link {
+                font-size: 16px;
+            }
+            .smokey-effect {
+                height: 150px; /* Adjust smoke effect height for mobile */
+            }
+            .hero h2 {
+                font-size: 20px;
+            }
+            .hero p {
+                font-size: 14px;
+            }
+            .btn {
+                padding: 10px 15px;
+                font-size: 14px;
+            }
         }
     </style>
 </head>
