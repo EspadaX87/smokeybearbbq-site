@@ -42,18 +42,12 @@
             text-shadow: 0 0 20px rgba(156, 28, 28, 1);
         }
         
-        /* Smokey Effect (More Intense) */
+        /* Fiery Smokey Effect */
         .smokey-effect {
             position: relative;
-            height: 150px;
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 10%, rgba(0, 0, 0, 0) 90%);
-            animation: smokeAnimation 2s infinite alternate ease-in-out;
-            filter: blur(5px);
-        }
-        
-        @keyframes smokeAnimation {
-            0% { opacity: 0.4; transform: translateY(5px); }
-            100% { opacity: 0.9; transform: translateY(-5px); }
+            height: 200px;
+            background: url('https://media.giphy.com/media/3oKIPl74CoTkgh1qFy/giphy.gif') no-repeat center center;
+            background-size: cover;
         }
     </style>
 </head>
